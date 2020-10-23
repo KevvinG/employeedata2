@@ -24,7 +24,7 @@ class OutputFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentOutputBinding.inflate(inflater, container, false)
         //Getting data from input
-        val empData = arguments?.getSerializable("model") as EmployeeModel
+        val empData = arguments?.getSerializable("data") as EmployeeModel
         //Converting bool to string
         val trained = if (empData.trained) {
             "Is Trained"

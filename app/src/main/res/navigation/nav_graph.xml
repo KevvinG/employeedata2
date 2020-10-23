@@ -10,12 +10,16 @@
         android:label="fragment_input"
         tools:layout="@layout/fragment_input" >
         <action
-            android:id="@+id/action_inputFragment_to_outputFragment"
+            android:id="@+id/action_input_to_output"
             app:destination="@id/outputFragment" />
     </fragment>
     <fragment
         android:id="@+id/outputFragment"
         android:name="com.example.employeedata2.OutputFragment"
         android:label="fragment_output"
-        tools:layout="@layout/fragment_output" />
+        tools:layout="@layout/fragment_output" >
+        <action
+            android:id="@+id/action_output_to_input"
+            app:destination="@id/inputFragment" />
+    </fragment>
 </navigation>

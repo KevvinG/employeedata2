@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.employeedata2.databinding.FragmentInputBinding
+import com.example.employeedata2.model.EmployeeModel
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -35,6 +36,12 @@ class InputFragment : Fragment() {
         val trained = binding.chkTrained.isChecked
         val certified = binding.chkCertified.isChecked
 
-        
+        send(EmployeeModel(name,trained,certified))
+    }
+
+    private fun send(model: EmployeeModel) {
+        val arguments = Bundle()
+        arguments.putSerializable("data", model)
+        findNavController().navigate(R.id.action_input_to_output, arguments)
     }
 }

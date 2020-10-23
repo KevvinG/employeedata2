@@ -38,9 +38,9 @@ class OutputFragment : Fragment() {
         }
 
         binding.apply {
-            txtName.text = empData.employeeName
-            txtTrained.text = empData.employeeName + " " + trained
-            txtCertified.text = empData.employeeName + " " + certified
+            txtName.text = empData.employeeName + "\n"
+            txtTrained.text = empData.employeeName + " " + trained + "\n"
+            txtCertified.text = empData.employeeName + " " + certified + "\n"
             btnBack.setOnClickListener{
                 findNavController().navigate(R.id.action_output_to_input)
             }
